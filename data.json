@@ -1,0 +1,29 @@
+{
+    "cards": [
+      {
+        "title": "Memories",
+        "link": "./movie-seat-booking/index.html",
+        "image": "./images/movie-seat-booking.png",
+        "details": "React, Redux, Node, MongoDB, Express, JavaScript, Material UI, HTML, CSS"
+      },
+      {
+        "title": "Youtube Clone",
+        "link": "./movie-seat-booking/index.html",
+        "image": "./images/movie-seat-booking.png",
+        "details": "React, JavaScript, Material UI, HTML, CSS"
+      },
+      {
+        "title": "Form validator",
+        "link": "./form-validation/index.html",
+        "image": "./images/form-validation.png",
+        "details": "JavaScript, HTML, CSS"
+      },
+      {
+        "title": "Movie Seat Booking",
+        "link": "./movie-seat-booking/index.html",
+        "image": "./images/movie-seat-booking.png",
+        "details": "JavaScript, HTML, CSS"
+      }
+    ]
+  }
+  

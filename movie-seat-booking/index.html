@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <main class="main">
+        <section class="movie" id="movie">
+            <label class="movie-label">Pick a Movie:</label>
+
+            <select class="movie-selection" id="movie-selection">
+                <option value="10">Avengers: EndGame ($10)</option>
+                <option value="12">Joker ($12)</option>
+                <option value="8">Toy Story 4 ($8)</option>
+                <option value="9">The Lion King ($9)</option>
+            </select>
+
+            <ul class="movie-showcase" id="movie-showcase">
+                <li>
+                    <div class="seat"></div>
+                    <small>N/A</small>
+                </li>
+                <li>
+                    <div class="seat selected"></div>
+                    <small>Selected</small>
+                </li>
+                <li>
+                    <div class="seat occupied"></div>
+                    <small>Occupied</small>
+                </li>
+            </ul>
+
+            <div class="movie-screen" id="movie-screen">
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                </div>
+                <div class="row">
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                </div>
+
+            </div>
+            <p class="movie-total">you have selected <span id="count">0</span> seats for a price of $<span id="total">0</span></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

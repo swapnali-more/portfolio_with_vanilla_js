@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="main">
+        <section class="project-list">
+            <h1>JavaScript projects</h1>
+            <div class="grid-container">
+            </div>
+        </section>
+    </main>
+    <script src="data.json"></script>
+    <script>
+        fetch('data.json')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data, "data")
+                const gridContainer = document.querySelector('.grid-container');
+                data.cards.forEach(card => {
+                    console.log("card", card)
+                    const gridItem = `
+                    <div class="grid-item">
+                        <div class="card">
+                            <a href="${card.link}">
+                                <img src="${card.image}" alt="${card.title}">
+                                <div class="card-content">
+                                    <h2>${card.title}</h2>
+                                    <p>Project Technologies: ${card.details}</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                    gridContainer.innerHTML += gridItem;
+                })
+            })
+    </script>
+</body>
+
+</html>
