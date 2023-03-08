@@ -1,0 +1,162 @@
+@import "./main.scss";
+
+.form {
+    margin: 0 auto;
+    background: map-get($colors, silver);
+    padding: 20px;
+    max-width: 400px;
+
+    &-control {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 5px;
+            padding: 10px;
+            border: map-get($border-widths, input) solid map-get($colors, doveGray);
+        }
+
+        small {
+            color: map-get($colors, error);
+            display: none;
+        }
+
+        &.error {
+            input {
+                border-color: map-get($colors, error);
+                ;
+            }
+
+            small {
+                display: block;
+            }
+        }
+
+        &.success {
+            input {
+                border-color: map-get($colors, success);
+            }
+        }
+    }
+}
+
+.movie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    &-label {
+        color: black;
+        margin-bottom: 15px;
+    }
+    &-selection {
+        padding: 10px;
+        background: map-get($colors, doveGray);
+        color: white;
+    }
+    .seat {
+        background: rgba(167, 164, 175, 0.5);
+        width: 24px;
+        height: 20px;
+        border-radius: 10px 10px 0 0;
+        &:nth-of-type(2) {
+            margin-right: 18px;
+        }
+        &:nth-last-of-type(2) {
+            margin-left: 18px;
+        }
+        &.occupied {
+            background: map-get($colors, doveGray);
+        }
+        &.selected {
+            background: map-get($colors, success);
+        }
+        &:not(.occupied):hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+    &-showcase {
+        display: flex;
+        li {
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            small {
+                margin-left: 4px;
+            }
+        }
+    }
+    &-screen {
+        margin-bottom: 15px;
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px 0;
+        }
+        .seat {
+            margin: 0 2px;
+        }
+    }
+}
+
+.video-player {
+    text-align: center;
+    width: 500px;
+    height: 350px;
+    position: relative;
+    margin: 0 auto;
+    &-screen {
+        width: 100%;
+        height: calc(100% - 40px);
+        border: map-get($border-widths, input) solid;
+    }
+    &-controls {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        bottom: 20px;
+        left: 50%;
+        width: 90%;
+        transform: translateX(-50%);
+        .icon {
+            &:hover {
+                color: map-get($colors, doveGray);
+            }
+        }
+        .progress {
+            width: 100%;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: map-get($colors, doveGray);
+        }
+    }
+}
+
+.exchange-rate {
+    text-align: center;
+    &-rate {
+        margin: 10px 0;
+        display: flex;
+        justify-content: center;
+        select, input {
+            padding: 5px;
+            border: map-get($border-widths, input) solid map-get($colors, doveGray);
+            font-size: 14px;
+            display: block;
+        }
+    }
+    .swap {
+        background-color: map-get($colors, black);
+    }
+}

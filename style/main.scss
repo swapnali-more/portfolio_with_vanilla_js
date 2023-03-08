@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Roboto+Condensed:wght@300;400&display=swap');
+
+$colors: (
+    white: #fdfdfd,
+    black: #020202,
+    silver: #aeaeae,
+    doveGray: #6c6c6c,
+    blazeOrange: #fb6200,
+    tulipTree: #f0b142,
+    jambalaya: #5f3013,
+    error: #D63301,
+    success: #4F8A10
+);
+
+$font-sizes: (h1: 35px,
+    body: 16px,
+);
+
+$border-widths: (input: 1px,
+);
+
+$fonts: (main: 'Roboto Condensed',
+);
+
+body {
+    background-color: map-get($colors, white);
+    margin: 0;
+    padding: 0;
+    color: map-get($colors, black);
+    font-size: map-get($font-sizes, body);
+    font-family: map-get($fonts, main);
+}
+
+.main {
+    padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: map-get($font-sizes, h1);
+}
+
+a {
+    text-decoration: none;
+    color: map-get($colors, blazeOrange )
+}
+
+.project-list {
+    text-align: center;
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+
+        .card {
+            width: 100%;
+            background-color: map-get($colors, black);
+            overflow: hidden;
+            color: map-get($colors, white);
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 200px;
+                display: block;
+                object-fit: cover;
+            }
+
+            &-content {
+                padding: 20px;
+
+                h2 {
+                    margin: 0;
+                    margin-bottom: 10px;
+                }
+            }
+
+            &-links {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                a {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+                .image {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    padding: 10px;
+    color: map-get($colors, white);
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    border: map-get($border-widths, input) solid;
+
+    &-primary {
+        background-color: map-get($colors, blazeOrange);
+        border-color: map-get($colors, blazeOrange);
+
+        &:hover,
+        &:focus,
+        &:visited {
+            background-color: map-get($colors, tulipTree);
+            color: map-get($colors, white);
+            border-color: map-get($colors, tulipTree);
+        }
+    }
+
+    &-secondary {
+        background-color: map-get($colors, tulipTree);
+        border-color: map-get($colors, tulipTree);
+
+        &:hover,
+        &:focus,
+        &:visited {
+            background-color: map-get($colors, blazeOrange);
+            color: map-get($colors, white);
+            border-color: map-get($colors, blazeOrange);
+        }
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.modal {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: map-get($colors, black);
+    padding: 30px;
+    z-index: 2;
+    color: #fff;
+    max-width: 90%;
+    .btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 14px;
+        padding: 4px;
+    }
+    &.open {
+        display: block;
+    }
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    background: map-get($colors, silver);
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 1;
+    &.show {
+        display: block;
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Rate Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <main class="main">
+        <section class="exchange-rate" id="movie">
+            <i class="fa-regular fa-face-tongue-money"></i>
+            <h2>Exchange Rate Calculator</h2>
+            <p> choose the current and the amount to get the exchange rate</p>
+
+
+            <div class="exchange-rate-inner">
+                <div class="exchange-rate-rate">
+                    <select class="exchange-rate-country" id="country-from">
+                    </select>
+    
+                    <input type="number" class="exchange-rate-currency" id="currency-from" value="1"/>
+                </div>
+                <button class="btn swap" id="swap"><i class="fa-solid fa-retweet"></i></button>
+                <span id="rate"></span>
+                <div class="exchange-rate-rate">
+                    <select class="exchange-rate-country" id="country-to">
+                    </select>
+    
+                    <input type="number" class="exchange-rate-currency" id="currency-to" value=""/>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

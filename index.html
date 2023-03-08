@@ -4,17 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Projects</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <main class="main">
+        <header class="header">
+            <h1 class="header-title">My Personal Projects</h1>
+            <div class="header-btns">
+                <button class="btn btn-primary" id="resume" target="_blank">My Resume</button>
+                <button class="btn btn-secondary" onclick="AboutMe()">About Me</button>
+            </div>
+        </header>
         <section class="project-list">
-            <h1>JavaScript projects</h1>
             <div class="grid-container">
             </div>
         </section>
+
+        <div class="overlay"></div>
+        <div class="modal">
+            <button onclick="Close()" class="btn btn-primary">Close</button>
+            <h2>About Me</h2>
+            <p>As a front end developer with 3.5+ years of experience, I have gained expertise in developing visually appealing and interactive user interfaces for websites and web applications. My key responsibilities include translating design concepts into functional web interfaces using HTML, CSS, and JavaScript, optimizing website performance and ensuring cross-browser compatibility.</p>
+
+            <p>In my role, I have worked on various projects, including the development of responsive websites and web applications, creating and implementing user experience design, and collaborating with cross-functional teams such as designers, back-end developers, and project managers.</p>
+                
+            <p>I have experience in utilizing various front-end frameworks such as React and Angular, as well as libraries such as jQuery and Bootstrap to improve user interfaces and enhance website functionality. I am also familiar with front-end development tools and workflows, including Git, Webpack, and Gulp.</p>
+                
+            <p>In addition to technical skills, I have developed strong communication skills and collaboration abilities through my experience as a front-end developer. I have worked closely with clients and stakeholders to understand their needs and provide technical guidance and recommendations based on industry best practices.</p>
+        </div>
     </main>
     <script src="data.json"></script>
     <script>
@@ -28,19 +47,38 @@
                     const gridItem = `
                     <div class="grid-item">
                         <div class="card">
-                            <a href="${card.link}">
                                 <img src="${card.image}" alt="${card.title}">
                                 <div class="card-content">
                                     <h2>${card.title}</h2>
                                     <p>Project Technologies: ${card.details}</p>
+                                    <div class="card-links">
+                                        ${card.github ? `<a href="${card.link}" target="_blank"><img src="./images/github.png" class="image"></a>` : '' }
+                                        ${card.link ? `<a href="${card.link}" target="_blank"><img src="./images/link.jpg" class="image"></a>` : '' }
+                                    </div>
                                 </div>
-                            </a>
                         </div>
                     </div>
                 `;
                     gridContainer.innerHTML += gridItem;
                 })
+
+                const resume = document.querySelector('#resume');
+                resume.setAttribute('href', data.resume);
             })
+
+            let overlay = document.querySelector('.overlay');
+            let modal = document.querySelector('.modal')
+
+            //About me button
+            const AboutMe = () => {
+                overlay.classList.add('show')
+                modal.classList.add('open')
+            }
+            // Close 
+            const Close = () => {
+                overlay.classList.remove('show')
+                modal.classList.remove('open')
+            }
     </script>
 </body>
 
