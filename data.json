@@ -13,18 +13,45 @@
       "github": "https://github.com/swapnalimore-github/memories"
     },
     {
+      "title": "Add and Remove Cart using Redux simple example",
+      "image": "./images/add-remove-cart.PNG",
+      "details": "React, JavaScript, Material UI, HTML, CSS",
+      "github": "https://github.com/swapnalimore-github/AddRemoveCartRedux"
+    },
+    {
+      "title": "AutoMob Mechanic",
+      "link": "./AutoMob/index.html",
+      "image": "./images/form-validation.png",
+      "details": "JavaScript, HTML, CSS",
+      "github": "https://github.com/swapnalimore-github/portfolio"
+    },
+    {
       "title": "Form validator",
       "link": "./form-validation/index.html",
       "image": "./images/form-validation.png",
       "details": "JavaScript, HTML, CSS",
-      "github": ""
+      "github": "https://github.com/swapnalimore-github/portfolio"
     },
     {
       "title": "Movie Seat Booking",
       "link": "./movie-seat-booking/index.html",
       "image": "./images/movie-seat-booking.png",
       "details": "JavaScript, HTML, CSS",
-      "github": "https://github.com/swapnalimore-github/memories"
+      "github": "https://github.com/swapnalimore-github/portfolio"
+    },
+    {
+      "title": "Video Player",
+      "link": "./movie-seat-booking/index.html",
+      "image": "./images/video-player.PNG",
+      "details": "JavaScript, HTML, CSS",
+      "github": "https://github.com/swapnalimore-github/portfolio"
+    },
+    {
+      "title": "Exchange Rate Calculator",
+      "link": "./exchange-rate-calculator/index.html",
+      "image": "./images/exchange-rate-calculator.PNG",
+      "details": "JavaScript, HTML, CSS",
+      "github": "https://github.com/swapnalimore-github/portfolio"
     }
   ],
   "resume": "./images/Swapnali_More_Resume.pdf"
