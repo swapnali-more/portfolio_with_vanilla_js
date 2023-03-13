@@ -14,9 +14,9 @@
             <h1 class="header-title">My Personal Projects</h1>
             <div class="header-btns">
                 <div class="header-links">
-                    <a target="_blank" href="https://www.linkedin.com/in/swapnali-more/" class="link"><img src="images/linkedin.png"></a>
-                <a target="_blank" href="https://github.com/swapnalimore-github" class="link"><img src="images/github.png"></a>
-                <a target="_blank" href="https://www.hackerrank.com/swapnalim182" class="link"><img src="images/hackerrank.png"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/swapnali-more/" class="link"><img src="images/linkedin.jpg" alt="Linkedin"></a>
+                <a target="_blank" href="https://github.com/swapnalimore-github" class="link"><img src="images/github.jpg" alt="Github"></a>
+                <a target="_blank" href="https://www.hackerrank.com/swapnalim182" class="link"><img src="images/hackerrank.jpg" alt="Hackerrank"></a>
                 </div>
                 <a class="btn btn-primary" id="resume" target="_blank">My Resume</a>
                 <button class="btn btn-secondary" onclick="AboutMe()">About Me</button>
@@ -57,8 +57,8 @@
                                     <h2>${project.title}</h2>
                                     <p>Project Technologies: ${project.details}</p>
                                     <div class="card-links">
-                                        ${project.github ? `<a href="${project.github}" target="_blank"><img src="./images/github.png" class="image"></a>` : '' }
-                                        ${project.link ? `<a href="${project.link}" target="_blank"><img src="./images/link.jpg" class="image"></a>` : '' }
+                                        ${project.github ? `<a href="${project.github}" target="_blank"><img src="./images/github.jpg" title="click to view git repo" class="image"></a>` : '' }
+                                        ${project.link ? `<a href="${project.link}" target="_blank"><img src="./images/link.jpg" title="click to view live project" class="image"></a>` : '' }
                                     </div>
                                 </div>
                         </div>
