@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Swapnali More</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,7 +13,12 @@
         <header class="header">
             <h1 class="header-title">My Personal Projects</h1>
             <div class="header-btns">
-                <button class="btn btn-primary" id="resume" target="_blank">My Resume</button>
+                <div class="header-links">
+                    <a target="_blank" href="https://www.linkedin.com/in/swapnali-more/" class="link"><img src="images/linkedin.png"></a>
+                <a target="_blank" href="https://github.com/swapnalimore-github" class="link"><img src="images/github.png"></a>
+                <a target="_blank" href="https://www.hackerrank.com/swapnalim182" class="link"><img src="images/hackerrank.png"></a>
+                </div>
+                <a class="btn btn-primary" id="resume" target="_blank">My Resume</a>
                 <button class="btn btn-secondary" onclick="AboutMe()">About Me</button>
             </div>
         </header>
@@ -42,18 +47,18 @@
             .then(data => {
                 console.log(data, "data")
                 const gridContainer = document.querySelector('.grid-container');
-                data.cards.forEach(card => {
-                    console.log("card", card)
+                data.projects.forEach(project => {
+                    console.log("project", project)
                     const gridItem = `
                     <div class="grid-item">
                         <div class="card">
-                                <img src="${card.image}" alt="${card.title}">
+                                <img src="${project.image}" alt="${project.title}">
                                 <div class="card-content">
-                                    <h2>${card.title}</h2>
-                                    <p>Project Technologies: ${card.details}</p>
+                                    <h2>${project.title}</h2>
+                                    <p>Project Technologies: ${project.details}</p>
                                     <div class="card-links">
-                                        ${card.github ? `<a href="${card.link}" target="_blank"><img src="./images/github.png" class="image"></a>` : '' }
-                                        ${card.link ? `<a href="${card.link}" target="_blank"><img src="./images/link.jpg" class="image"></a>` : '' }
+                                        ${project.github ? `<a href="${project.github}" target="_blank"><img src="./images/github.png" class="image"></a>` : '' }
+                                        ${project.link ? `<a href="${project.link}" target="_blank"><img src="./images/link.jpg" class="image"></a>` : '' }
                                     </div>
                                 </div>
                         </div>

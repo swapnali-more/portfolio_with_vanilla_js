@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   color: #020202;
-  font-size: 16px;
+  font-size: 12px;
   font-family: "Roboto Condensed";
 }
 
@@ -26,6 +26,11 @@ p {
 h1 {
   font-size: 35px;
 }
+@media screen and (max-width: 575px) {
+  h1 {
+    font-size: 25px;
+  }
+}
 
 a {
   text-decoration: none;
@@ -37,15 +42,50 @@ a {
 }
 .project-list .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 10px;
+}
+@media screen and (min-width: 1500px) {
+  .project-list .grid-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .project-list .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 991px) {
+  .project-list .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  .project-list .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 400px) {
+  .project-list .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .project-list .grid-container .card {
   width: 100%;
+  height: 100%;
   background-color: #020202;
   overflow: hidden;
   color: #fdfdfd;
   position: relative;
+}
+.project-list .grid-container .card:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #020202;
+  opacity: 0.4;
 }
 .project-list .grid-container .card img {
   width: 100%;
@@ -55,11 +95,13 @@ a {
      object-fit: cover;
 }
 .project-list .grid-container .card-content {
-  padding: 20px;
+  padding: 10px;
+  z-index: 9;
 }
 .project-list .grid-container .card-content h2 {
   margin: 0;
   margin-bottom: 10px;
+  font-size: 22px;
 }
 .project-list .grid-container .card-links {
   position: absolute;
@@ -83,6 +125,12 @@ a {
   font-size: 16px;
   cursor: pointer;
   border: 1px solid;
+}
+@media screen and (max-width: 575px) {
+  .btn {
+    padding: 8px;
+    font-size: 12px;
+  }
 }
 .btn-primary {
   background-color: #fb6200;
@@ -109,6 +157,32 @@ a {
   justify-content: space-between;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 575px) {
+  .header-btns {
+    display: flex;
+  }
+}
+.header-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.header-links .link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+  overflow: hidden;
+  border: 1px solid #000;
+  margin: 2px;
+}
+.header-links .link img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
 .modal {
   position: absolute;
@@ -116,11 +190,17 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #020202;
+  background: rgba(0, 0, 0, 0.8);
   padding: 30px;
   z-index: 2;
   color: #fff;
   max-width: 90%;
+}
+.modal h2 {
+  font-size: 22px;
+}
+.modal p {
+  font-size: 15px;
 }
 .modal .btn {
   position: absolute;

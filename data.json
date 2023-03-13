@@ -1,58 +1,79 @@
 {
-  "cards": [
+  "projects": [
     {
       "title": "Memories",
-      "image": "./images/movie-seat-booking.png",
+      "image": "./images/memories.PNG",
       "details": "React, Redux, Node, MongoDB, Express, JavaScript, Material UI, HTML, CSS",
-      "github": "https://github.com/swapnalimore-github/youtube-clone"
+      "github": "https://github.com/swapnali-more/mern_memories_app"
     },
     {
       "title": "Youtube Clone",
-      "image": "./images/movie-seat-booking.png",
+      "image": "./images/youtube-clone.PNG",
       "details": "React, JavaScript, Material UI, HTML, CSS",
-      "github": "https://github.com/swapnalimore-github/memories"
+      "github": "https://github.com/swapnali-more/youtube-clone"
+    },
+    {
+      "title": "Ecommerce Shopping Cart",
+      "image": "./images/ecommerce-shopping-cart.PNG",
+      "details": "React class components, JavaScript, React Bootstrap, HTML, CSS",
+      "github": "https://github.com/swapnali-more/ecommerce_class_compo_redux"
+    },
+    {
+      "title": "Simple Amazon Clone",
+      "image": "./images/amazon-clone.PNG",
+      "details": "React, Redux, JavaScript, Material UI, HTML, CSS",
+      "github": "https://github.com/swapnali-more/simple_amazon_clone_with_redux"
+    },
+    {
+      "title": "Corona Live Tracker",
+      "image": "./images/corona-live.PNG",
+      "details": "React, JavaScript, React Bootstrap, HTML, CSS",
+      "github": "https://github.com/swapnali-more/corona_live_tracker"
     },
     {
       "title": "Add and Remove Cart using Redux simple example",
       "image": "./images/add-remove-cart.PNG",
-      "details": "React, JavaScript, Material UI, HTML, CSS",
-      "github": "https://github.com/swapnalimore-github/AddRemoveCartRedux"
+      "details": "React, Redux, Material UI, JavaScript, HTML, CSS",
+      "github": "https://github.com/swapnali-more/add_remove_cart_simple_redux"
     },
     {
       "title": "AutoMob Mechanic",
-      "link": "./AutoMob/index.html",
-      "image": "./images/form-validation.png",
+      "link": "./automob-mobile/index.html",
+      "image": "./images/automob-mobile.PNG",
       "details": "JavaScript, HTML, CSS",
-      "github": "https://github.com/swapnalimore-github/portfolio"
+      "github": "https://github.com/swapnali-more/auto_mobile_vanilla_js"
     },
     {
       "title": "Form validator",
       "link": "./form-validation/index.html",
       "image": "./images/form-validation.png",
       "details": "JavaScript, HTML, CSS",
-      "github": "https://github.com/swapnalimore-github/portfolio"
+      "github": "https://github.com/swapnali-more/portfolio_with_vanilla_js"
     },
     {
       "title": "Movie Seat Booking",
       "link": "./movie-seat-booking/index.html",
       "image": "./images/movie-seat-booking.png",
       "details": "JavaScript, HTML, CSS",
-      "github": "https://github.com/swapnalimore-github/portfolio"
+      "github": "https://github.com/swapnali-more/portfolio_with_vanilla_js"
     },
     {
       "title": "Video Player",
-      "link": "./movie-seat-booking/index.html",
+      "link": "./video-player/index.html",
       "image": "./images/video-player.PNG",
       "details": "JavaScript, HTML, CSS",
-      "github": "https://github.com/swapnalimore-github/portfolio"
+      "github": "https://github.com/swapnali-more/portfolio_with_vanilla_js"
     },
     {
       "title": "Exchange Rate Calculator",
       "link": "./exchange-rate-calculator/index.html",
       "image": "./images/exchange-rate-calculator.PNG",
       "details": "JavaScript, HTML, CSS",
-      "github": "https://github.com/swapnalimore-github/portfolio"
+      "github": "https://github.com/swapnali-more/portfolio_with_vanilla_js"
     }
   ],
-  "resume": "./images/Swapnali_More_Resume.pdf"
+  "resume": "./images/Swapnali_More_Resume.pdf",
+  "linkedin": "https://www.linkedin.com/in/swapnali-more/",
+  "github": "https://github.com/swapnalimore-github",
+  "hackerrank": "https://www.hackerrank.com/swapnalim182"
 }
